@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+/* additional css base */
+@layer base {
+  html {
+    /* Enable smooth scrolling for anchor links */
+    scroll-behavior: smooth;
+    /* Enable keywords animations */
+    interpolate-size: allow-keywords;
+  }
+
+  /* Applies styles when Reduced Motion is enabled */
+  @media screen and (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Avoid text overflows */
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
+
+  /* Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+  }
+}
+
+@theme {
+  /* font */
+  --font-sans: "Roboto", sans-serif;
+  --text-xxs: 0.6875rem;
+
+  /* color */
+  --color-attribution: hsl(228, 45%, 44%);
+  --color-blue-800: hsl(234, 29%, 20%);
+  --color-blue-700: hsl(235, 18%, 26%);
+  --color-grey: hsl(0, 0%, 58%);
+  --color-white: hsl(0, 0%, 100%);
+}

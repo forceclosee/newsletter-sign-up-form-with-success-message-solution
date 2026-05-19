@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <!-- SEO Meta Tags -->
+  <title>Newsletter sign-up form with success message | Force Close</title>
+  <meta name="author" content="Force Close">
+  <meta name="description" content="">
+  <meta name="keywords" content="Force Close, ">
+
+  <!-- OG Tags -->
+  <meta property="og:title" content=" | Force Close">
+  <meta property="og:description" content="">
+  <meta property="og:image" content=""> <!-- isi image -->
+  <meta property="og:url" content=""> <!-- isi live site url -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Force Close Portfolio">
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content=" | Force Close">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content=""> <!-- isi image -->
+  <meta property="twitter:url" content=""> <!-- isi live site url -->
+
+  <!-- favicon -->
+  <link rel="icon" href="" type="image/svg+xml"> <!-- isi image -->
+
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="./css/output.css">
+
+  <!-- javascript -->
+  <script src="./js/form.js" defer></script>
+
+</head>
+
+<body class="min-block-svh justify-center items-center grid grid-rows-[1fr_auto] bg-grey">
+  <main class="max-inline-3xl bg-white">
+    <!-- Sign-up form start -->
+    <section class="flex lg:flex-row-reverse flex-col justify-center items-center gap-8">
+      <picture>
+        <source media="(width >= 64rem)" srcset="./img/illustration-sign-up-desktop.svg">
+        <source media="(width >= 48rem)" srcset="./img/illustration-sign-up-tablet.svg">
+        <img src="./img/illustration-sign-up-mobile.svg" alt="Newsletter illustration" class="w-full h-auto">
+      </picture>
+      <div class="px-6">
+        <h1 class="font-bold text-[2.5rem]">
+          Stay updated!
+        </h1>
+        <p>
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
+        <ul class="flex flex-col gap-2 my-6">
+          <li class="flex items-start gap-4 before:content-[url('../img/icon-list.svg')] before:pbs-0.5">
+            Product discovery and building what matters
+          </li>
+          <li class="flex items-start gap-4 before:content-[url('../img/icon-list.svg')] before:pbs-0.5">
+            Measuring to ensure updates are a success
+          </li>
+          <li class="flex items-start gap-4 before:content-[url('../img/icon-list.svg')] before:pbs-0.5">
+            And much more!
+          </li>
+        </ul>
+        <form class="flex flex-col" action="">
+          <label for="">
+            Email address
+          </label>
+          <input class="block-10 px-6 border border-grey mbe-6" type="email" placeholder="email@company.com">
+          <button class="block-10 bg-blue-800 text-white" type="submit">
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+      </div>
+    </section>
+    <!-- Sign-up form end -->
+
+    <!-- Success message start -->
+    <section class="hidden">
+      <h1>
+        Thanks for subscribing!
+      </h1>
+      <p>
+        A confirmation email has been sent to ash@loremcompany.com.
+      </p>
+      <p>
+        Please open it and click the button inside to confirm your subscription.
+      </p>
+      <button type="button">
+        Dismiss message
+      </button>
+    </section>
+    <!-- Success message end -->
+  </main>
+
+  <footer class="text-xxs text-center attribution mbe-2">
+    Challenge by <a class="text-attribution" href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a class="text-attribution" href="https://github.com/forceclosee" target="_blank" rel="noopener noreferrer">Force Close</a>.
+  </footer>
+</body>
+
+</html>
