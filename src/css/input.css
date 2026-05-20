@@ -50,6 +50,7 @@
   /* font */
   --font-sans: "Roboto", sans-serif;
   --text-xxs: 0.6875rem;
+  --text-h1: clamp(2.5rem, 2.4653vi + 1.9222rem, 3.5rem);
 
   /* color */
   --color-attribution: hsl(228, 45%, 44%);
@@ -57,4 +58,15 @@
   --color-blue-700: hsl(235, 18%, 26%);
   --color-grey: hsl(0, 0%, 58%);
   --color-white: hsl(0, 0%, 100%);
+
+  /* border radius */
+  --radius-responsive: clamp(1rem, 6.25vi - 2rem, 2rem);
+}
+
+@utility btn-blue {
+  @apply block-14 inline-full flex justify-center items-center bg-blue-800 hover:bg-linear-to-r hover:from-pink-500 hover:to-amber-600 rounded-lg font-bold text-white cursor-pointer;
+}
+
+@utility list {
+  @apply flex items-start gap-4 before:content-[url('../img/icon-list.svg')] before:pbs-0.5;
 }

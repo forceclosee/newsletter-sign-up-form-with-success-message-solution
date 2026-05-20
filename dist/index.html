@@ -42,68 +42,76 @@
 
 </head>
 
-<body class="min-block-svh justify-center items-center grid grid-rows-[1fr_auto] bg-grey">
-  <main class="max-inline-3xl bg-white">
-    <!-- Sign-up form start -->
-    <section class="flex lg:flex-row-reverse flex-col justify-center items-center gap-8">
-      <picture>
-        <source media="(width >= 64rem)" srcset="./img/illustration-sign-up-desktop.svg">
-        <source media="(width >= 48rem)" srcset="./img/illustration-sign-up-tablet.svg">
-        <img src="./img/illustration-sign-up-mobile.svg" alt="Newsletter illustration" class="w-full h-auto">
-      </picture>
-      <div class="px-6">
-        <h1 class="font-bold text-[2.5rem]">
-          Stay updated!
-        </h1>
-        <p>
-          Join 60,000+ product managers receiving monthly updates on:
-        </p>
-        <ul class="flex flex-col gap-2 my-6">
-          <li class="flex items-start gap-4 before:content-[url('../img/icon-list.svg')] before:pbs-0.5">
-            Product discovery and building what matters
-          </li>
-          <li class="flex items-start gap-4 before:content-[url('../img/icon-list.svg')] before:pbs-0.5">
-            Measuring to ensure updates are a success
-          </li>
-          <li class="flex items-start gap-4 before:content-[url('../img/icon-list.svg')] before:pbs-0.5">
-            And much more!
-          </li>
-        </ul>
-        <form class="flex flex-col" action="">
-          <label for="">
-            Email address
-          </label>
-          <input class="block-10 px-6 border border-grey mbe-6" type="email" placeholder="email@company.com">
-          <button class="block-10 bg-blue-800 text-white" type="submit">
-            Subscribe to monthly newsletter
+<body class="bg-grey text-blue-800">
+
+  <div class="min-block-svh justify-center items-center gap-2 md:gap-6 grid md:px-6 md:pbs-6 pbe-2"> <!-- page layout -->
+    <main class="min-block-svh flex items-center">
+      <div class="min-block-svh md:min-block-max max-inline-max grid bg-white lg:py-6 lg:pe-6 md:rounded-2xl lg:rounded-4xl pbe-10"> <!-- wrapper -->
+        <!-- Sign-up form start -->
+        <section aria-hidden="false" class="aria-hidden:hidden lg:inline-226 justify-center items-center gap-8 lg:gap-16 grid lg:grid-cols-[1fr_auto] grid-rows-[auto_1fr] lg:grid-rows-1 col-start-1 row-start-1 sign-up-form">
+          <picture class="lg:order-last">
+            <source media="(width >= 64rem)" srcset="./img/illustration-sign-up-desktop.svg">
+            <source media="(width >= 48rem)" srcset="./img/illustration-sign-up-tablet.svg">
+            <img src="./img/illustration-sign-up-mobile.svg" alt="Newsletter illustration" class="w-full h-auto">
+          </picture>
+          <div class="px-6 lg:px-0 lg:ps-16">
+            <h1 class="font-bold text-h1 mbe-4 lg:mbe-2.5">
+              Stay updated!
+            </h1>
+            <p>
+              Join 60,000+ product managers receiving monthly updates on:
+            </p>
+            <ul class="flex flex-col gap-2 lg:gap-1 mbs-6 mbe-9">
+              <li class="list">
+                Product discovery and building what matters
+              </li>
+              <li class="list">
+                Measuring to ensure updates are a success
+              </li>
+              <li class="list">
+                And much more!
+              </li>
+            </ul>
+            <form class="flex flex-col" action="" novalidate>
+              <label for="email" class="font-bold text-xs mbe-2">
+                Email address
+              </label>
+              <input id="email" class="block-14 inline-full px-6 border border-grey rounded-lg mbe-6" type="email" placeholder="email@company.com" required>
+              <button class="btn-blue" type="submit">
+                <span class="pbs-[0.3rem]">
+                  Subscribe to monthly newsletter
+                </span>
+              </button>
+            </form>
+          </div>
+        </section>
+        <!-- Sign-up form end -->
+
+        <!-- Success message start -->
+        <section aria-hidden="true" class="aria-hidden:hidden max-inline-105 md:max-inline-126 justify-center items-center gap-10 grid grid-rows-[1fr_auto] col-start-1 row-start-1 lg:-my-6 lg:-me-6 px-6 md:px-16 pbs-12 pbe-10 md:pbe-16 success-message -mbe-10">
+          <div>
+            <h1 class="before:block font-bold text-h1 before:content-[url('../img/icon-success.svg')] leading-none mbe-6 before:mbe-8">
+              Thanks for subscribing!
+            </h1>
+            <p>
+              A confirmation email has been sent to
+              <span class="font-bold user-email"> ash@loremcompany.com</span>.
+              Please open it and click the button inside to confirm your subscription.
+            </p>
+          </div>
+          <button type="button" class="btn-blue">
+            Dismiss message
           </button>
-        </form>
+        </section>
+        <!-- Success message end -->
       </div>
-    </section>
-    <!-- Sign-up form end -->
+    </main>
 
-    <!-- Success message start -->
-    <section class="hidden">
-      <h1>
-        Thanks for subscribing!
-      </h1>
-      <p>
-        A confirmation email has been sent to ash@loremcompany.com.
-      </p>
-      <p>
-        Please open it and click the button inside to confirm your subscription.
-      </p>
-      <button type="button">
-        Dismiss message
-      </button>
-    </section>
-    <!-- Success message end -->
-  </main>
-
-  <footer class="text-xxs text-center attribution mbe-2">
-    Challenge by <a class="text-attribution" href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-    Coded by <a class="text-attribution" href="https://github.com/forceclosee" target="_blank" rel="noopener noreferrer">Force Close</a>.
-  </footer>
+    <footer class="text-xxs text-center attribution">
+      Challenge by <a class="text-attribution" href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a class="text-attribution" href="https://github.com/forceclosee" target="_blank" rel="noopener noreferrer">Force Close</a>.
+    </footer>
+  </div>
 </body>
 
 </html>
