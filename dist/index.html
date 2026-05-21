@@ -43,19 +43,20 @@
 </head>
 
 <body class="bg-grey text-blue-800">
-
-  <div class="min-block-svh justify-center items-center gap-2 md:gap-6 grid md:px-6 md:pbs-6 pbe-2"> <!-- page layout -->
+  <!-- page layout -->
+  <div class="min-block-svh grid justify-center items-center gap-2 md:gap-6 md:px-6 md:pbs-6 pbe-2">
     <main class="min-block-svh flex items-center">
-      <div class="min-block-svh md:min-block-max max-inline-max grid bg-white lg:py-6 lg:pe-6 md:rounded-2xl lg:rounded-4xl pbe-10"> <!-- wrapper -->
+      <!-- wrapper -->
+      <div class="min-block-svh md:min-block-max max-inline-max grid bg-white md:rounded-2xl lg:rounded-4xl">
         <!-- Sign-up form start -->
-        <section aria-hidden="false" class="aria-hidden:hidden lg:inline-226 justify-center items-center gap-8 lg:gap-16 grid lg:grid-cols-[1fr_auto] grid-rows-[auto_1fr] lg:grid-rows-1 col-start-1 row-start-1 sign-up-form">
+        <section aria-hidden="false" class="aria-hidden:hidden lg:inline-226 grid lg:grid-cols-[1fr_auto] grid-rows-[auto_1fr] lg:grid-rows-1 col-start-1 row-start-1 justify-center items-center gap-8 lg:gap-16 lg:py-6 lg:pe-6 pbe-10 sign-up-form">
           <picture class="lg:order-last">
             <source media="(width >= 64rem)" srcset="./img/illustration-sign-up-desktop.svg">
             <source media="(width >= 48rem)" srcset="./img/illustration-sign-up-tablet.svg">
-            <img src="./img/illustration-sign-up-mobile.svg" alt="Newsletter illustration" class="w-full h-auto">
+            <img class="block-auto inline-full" src="./img/illustration-sign-up-mobile.svg" alt="Newsletter illustration">
           </picture>
           <div class="px-6 lg:px-0 lg:ps-16">
-            <h1 class="font-bold text-h1 mbe-4 lg:mbe-2.5">
+            <h1 class="mbe-4 lg:mbe-2.5 font-bold text-h1">
               Stay updated!
             </h1>
             <p>
@@ -72,11 +73,11 @@
                 And much more!
               </li>
             </ul>
-            <form class="flex flex-col" action="" novalidate>
-              <label for="email" class="font-bold text-xs mbe-2">
+            <form class="flex flex-col" action="" autocomplete="on" novalidate>
+              <label for="email" class="mbe-2 font-bold text-xs">
                 Email address
               </label>
-              <input id="email" class="block-14 inline-full px-6 border border-grey rounded-lg mbe-6" type="email" placeholder="email@company.com" required>
+              <input id="email" class="block-14 inline-full mbe-6 px-6 border border-grey hover:border-2 hover:border-blue-800 rounded-lg" type="email" autocomplete="email" placeholder="email@company.com" required>
               <button class="btn-blue" type="submit">
                 <span class="pbs-[0.3rem]">
                   Subscribe to monthly newsletter
@@ -88,9 +89,9 @@
         <!-- Sign-up form end -->
 
         <!-- Success message start -->
-        <section aria-hidden="true" class="aria-hidden:hidden max-inline-105 md:max-inline-126 justify-center items-center gap-10 grid grid-rows-[1fr_auto] col-start-1 row-start-1 lg:-my-6 lg:-me-6 px-6 md:px-16 pbs-12 pbe-10 md:pbe-16 success-message -mbe-10">
+        <section aria-hidden="true" class="aria-hidden:hidden max-inline-105 md:max-inline-126 grid grid-rows-[1fr_auto] col-start-1 row-start-1 justify-center items-center gap-10 px-6 md:px-16 pbs-12 pbe-10 md:pbe-16 success-message">
           <div>
-            <h1 class="before:block font-bold text-h1 before:content-[url('../img/icon-success.svg')] leading-none mbe-6 before:mbe-8">
+            <h1 class="before:block mbe-6 before:mbe-8 font-bold text-h1 before:content-[url('../img/icon-success.svg')] leading-none">
               Thanks for subscribing!
             </h1>
             <p>
