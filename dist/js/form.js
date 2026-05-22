@@ -1,4 +1,5 @@
 // Select DOM elements
+const wrapper = document.querySelector(".wrapper");
 const signupForm = document.querySelector(".sign-up-form");
 const successMessage = document.querySelector(".success-message");
 const form = document.querySelector(".sign-up-form form");
@@ -57,8 +58,16 @@ form.addEventListener("submit", function (e) {
   emailInput.dataset.isBlur = "true";
   const isEmailValid = validateEmail(emailInput);
 
+  // If the email is not valid trigger shake animation
+
+  if (!isEmailValid) {
+    wrapper.classList.add("animate-shake");
+    setTimeout(() => {
+      wrapper.classList.remove("animate-shake");
+    }, 400);
+  }
   // If the email is valid, show the success message, hide the form, and reset the form state
-  if (isEmailValid) {
+  else if (isEmailValid) {
     successMessage.setAttribute("aria-hidden", false);
     signupForm.setAttribute("aria-hidden", true);
     document.querySelector("#input-email").textContent = emailInput.value;
