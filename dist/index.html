@@ -74,13 +74,15 @@
               </li>
             </ul>
             <form class="flex flex-col" action="" autocomplete="on" novalidate>
-              <div class="flex justify-between gap-2">
-                <label for="email" class="mbe-2 font-bold after:text-red-500 text-xs after:content-['*'] shrink-0">
-                  Email address
-                </label>
-                <span aria-live="polite" aria-hidden="true" id="error-message" class="aria-hidden:hidden block mbe-2 font-bold text-red-500 text-xs text-end"></span>
+              <div class="group">
+                <div class="flex justify-between gap-2"> <!-- label and error message wrapper -->
+                  <label for="email" class="mbe-2 font-bold after:text-red-500 text-xs after:content-['*'] shrink-0">
+                    Email address
+                  </label>
+                  <span aria-live="polite" id="error-message" class="hidden group-has-[:user-invalid]:block mbe-2 font-bold text-red-500 text-xs text-end"></span>
+                </div>
+                <input aria-describedby="error-message" id="email" class="input" type="email" autocomplete="email" placeholder="email@company.com" required data-error-value="Oops! Don't forget your email." data-error-type="Whoops! You missed the '@' symbol." data-error-pattern="Almost there! Just add the domain (e.g., company.com)." pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
               </div>
-              <input id="email" class="input" type="email" autocomplete="email" placeholder="email@company.com" required data-error-value="Oops! Don't forget your email." data-error-type="Whoops! You missed the '@' symbol." data-error-pattern="Almost there! Just add the domain (e.g., company.com)." pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
               <button class="btn-blue" type="submit">
                 <span class="pbs-[0.2rem]">
                   Subscribe to monthly newsletter

@@ -89,5 +89,5 @@
 }
 
 @utility input {
-  @apply block-14 inline-full data-[is-blur='true']:invalid:bg-red-100 valid:bg-green-50 mbe-6 px-6 border border-grey data-[is-blur='true']:invalid:border-red-500 data-[is-blur='true']:invalid:hover:border-red-500 data-[is-blur='true']:invalid:focus:border-red-500 hover:border-blue-800 focus:border-blue-800 valid:border-green-500 valid:hover:border-green-500 valid:focus:border-blue-800 rounded-lg focus:outline-none data-[is-blur='true']:invalid:hover:ring-red-500 data-[is-blur='true']:invalid:focus:ring-red-500 hover:ring-1 hover:ring-blue-800 focus:ring-1 focus:ring-blue-800 valid:hover:ring-green-500 valid:focus:ring-blue-800 hover:ring-inset focus:ring-inset;
+  @apply block-14 inline-full user-invalid:bg-red-100 valid:bg-green-100 mbe-6 px-6 border border-grey hover:border-blue-800 focus:border-blue-800 user-invalid:border-red-500 user-invalid:hover:border-red-500 user-invalid:focus:border-red-500 valid:border-green-500 valid:hover:border-green-500 valid:focus:border-blue-800 rounded-lg focus:outline-none hover:ring-1 hover:ring-blue-800 focus:ring-1 focus:ring-blue-800 user-invalid:hover:ring-red-500 valid:hover:ring-green-500 user-invalid:focus:ring-red-500 valid:focus:ring-blue-800 hover:ring-inset focus:ring-inset;
 }
