@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [solution URL](https://github.com/forceclosee/newsletter-sign-up-form-with-success-message)
+- Live Site URL: [live site URL](https://newsletter-sign-up-form-forceclose.vercel.app/)
 
 ## My process
 
@@ -93,16 +93,25 @@ During this project, I learned and practiced several key concepts:
     pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
   ```
 
+- **CSS `:has()` and `:user-invalid` pseudo-class**  
+  Using the modern CSS `:has()` pseudo-class (via Tailwind's `group-has-*` variant) to handle state-based UI changes without JavaScript. In this project, it is used to toggle the visibility of the error message dynamically when the user's input is invalid.
+
+  ```html
+  <div class="group">
+    <!-- ... -->
+    <span class="hidden group-has-[:user-invalid]:block text-red-500"></span>
+    <input type="email" required />
+  </div>
+  ```
+
 - **JavaScript form validation**  
-  Utilizing the Constraint Validation API (`validity` object) to detect specific input errors (such as `valueMissing`, `typeMismatch`, or `patternMismatch`) and displaying the corresponding error messages dynamically. The text for these error messages is retrieved from the custom `data-*` attributes embedded in the HTML, cleanly separating content from JavaScript logic.
+  Utilizing the Constraint Validation API (`validity` object) to detect specific input errors (such as `valueMissing`, `typeMismatch`, or `patternMismatch`) and dynamically setting the appropriate error text. The visibility of the error message is handed over to CSS, leaving JavaScript to focus solely on validation logic and retrieving the correct message from custom `data-*` attributes.
 
   ```js
   function validateEmail(emailInput) {
     const errorElement = document.querySelector("#error-message");
 
     if (!emailInput.validity.valid) {
-      errorElement.setAttribute("aria-hidden", false);
-
       if (emailInput.validity.valueMissing) {
         errorElement.textContent = emailInput.dataset.errorValue;
       } else if (
@@ -117,8 +126,9 @@ During this project, I learned and practiced several key concepts:
         errorElement.textContent = emailInput.dataset.errorPattern;
       }
       return false;
+    } else {
+      return true;
     }
-    // ...
   }
   ```
 
@@ -136,7 +146,7 @@ In future projects, I plan to continue focusing on:
 - [TinyPNG](https://tinypng.com/) - Helped me compress and optimize the images in the project without losing quality, making the page load faster.
 - [Cloudinary](https://cloudinary.com/) - Used to host the Open Graph and Twitter card images for social media sharing.
 - [Perfect Pixel](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjlophiddqccjgplachon0304v) - Chrome extension that allowed me to overlay the design mockup directly on my live page for pixel-perfect accuracy.
-- [MDN Web Docs](https://developer.mozilla.org/en-US/) - Crucial documentation that helped me understand HTML `picture` and `form` element as well as the JavaScript form validation.
+- [MDN Web Docs](https://developer.mozilla.org/en-US/) - Crucial documentation that helped me understand HTML `picture` and `form` element, css `:has()` `:valid` and `:user-invalid` pseudo class as well as the JavaScript form validation.
 
 ### AI Collaboration
 
@@ -149,7 +159,7 @@ In this project, I utilized Gemini Code Assist to enhance my workflow, solve spe
 - **Documentation:** Assisting in drafting clear and concise Git commit messages and structuring this `README.md` file.
 - **SEO Optimization:** Generating boilerplate for standard SEO, Open Graph, and Twitter Card meta tags.
 
-Overall, this collaborative process proved to be highly effective. The AI didn't just give me the code, instead it explained _why_ certain bugs happened (e.g., how the CSS box model is affected by border width changes) and how the proposed solution is considered a best practice. This made the AI act more like a mentor than just a code generator.
+So far, this collaborative process proved to be highly effective. The AI didn't just give me the code, instead it explained _why_ certain bugs happened (e.g., how the CSS box model is affected by border width changes) and how the proposed solution is considered a best practice. This made the AI act more like a mentor than just a code generator.
 
 ## Author
 
