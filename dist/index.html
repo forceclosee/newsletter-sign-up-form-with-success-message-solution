@@ -44,25 +44,25 @@
 
 <body class="bg-grey text-blue-800">
   <!-- page layout -->
-  <div class="min-block-svh grid justify-center items-center gap-2 md:gap-6 md:px-6 md:pbs-6 pbe-2">
-    <main class="min-block-svh flex items-center">
+  <div class="min-block-svh grid grid-rows-[1fr_auto] place-items-center gap-2 md:gap-6 md:px-6 md:pbs-6 pbe-2">
+    <main>
       <!-- wrapper -->
       <div class="min-block-svh md:min-block-max max-inline-max grid bg-white md:rounded-2xl lg:rounded-4xl wrapper">
         <!-- Sign-up form start -->
-        <section aria-hidden="false" class="aria-hidden:hidden lg:inline-232 grid lg:grid-cols-[1fr_auto] grid-rows-[auto_1fr] lg:grid-rows-1 col-start-1 row-start-1 justify-center items-center gap-8 lg:gap-16 lg:py-6 lg:pe-6 pbe-10 sign-up-form">
+        <section aria-hidden="false" class="aria-hidden:hidden max-inline-[30rem] md:max-inline-max lg:inline-232 grid lg:grid-cols-[1fr_auto] grid-rows-[auto_1fr] lg:grid-rows-1 col-start-1 row-start-1 items-center gap-12 lg:gap-16 lg:py-6 lg:pe-6 pbe-10 sign-up-form">
           <picture class="lg:order-last">
             <source media="(width >= 64rem)" srcset="./img/illustration-sign-up-desktop.svg">
             <source media="(width >= 48rem)" srcset="./img/illustration-sign-up-tablet.svg">
             <img class="block-auto inline-full" src="./img/illustration-sign-up-mobile.svg" alt="Newsletter illustration" width="375" height="284">
           </picture>
           <div class="px-6 lg:px-0 lg:ps-16">
-            <h1 class="mbe-4 lg:mbe-2.5 font-bold text-h1">
+            <h1 class="mbe-5 font-bold text-h1 trim-both-lowercase">
               Stay updated!
             </h1>
             <p>
               Join 60,000+ product managers receiving monthly updates on:
             </p>
-            <ul class="flex flex-col gap-2 lg:gap-1 mbs-6 mbe-9">
+            <ul class="flex flex-col gap-2 lg:gap-1 mbs-6 mbe-10">
               <li class="list">
                 Product discovery and building what matters
               </li>
@@ -73,20 +73,18 @@
                 And much more!
               </li>
             </ul>
-            <form class="flex flex-col" action="" autocomplete="on" novalidate>
-              <div class="group">
+            <form class="flex flex-col gap-6" action="" autocomplete="on" novalidate>
+              <div class="group flex flex-col gap-4 lg:gap-3">
                 <div class="flex justify-between gap-2"> <!-- label and error message wrapper -->
-                  <label for="email" class="mbe-2 font-bold after:text-red-500 text-xs after:content-['*'] shrink-0">
+                  <label for="email" class="font-bold after:text-red-500 text-xs after:content-['*'] trim-both-capital shrink-0">
                     Email address
                   </label>
-                  <span aria-live="polite" id="error-message" class="hidden group-has-[:user-invalid]:block mbe-2 font-bold text-red-500 text-xs text-end"></span>
+                  <span aria-live="polite" id="error-message" class="hidden group-has-[:user-invalid]:block font-bold text-red-500 text-xs text-end"></span>
                 </div>
                 <input aria-describedby="error-message" id="email" class="input" type="email" autocomplete="email" placeholder="email@company.com" required data-error-value="Oops! Don't forget your email." data-error-type="Whoops! You missed the '@' symbol." data-error-pattern="Almost there! Just add the domain (e.g., company.com)." pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
               </div>
-              <button class="btn-blue" type="submit">
-                <span class="pbs-[0.2rem]">
-                  Subscribe to monthly newsletter
-                </span>
+              <button class="trim-both-lowercase btn-blue" type="submit">
+                Subscribe to monthly newsletter
               </button>
             </form>
           </div>
@@ -94,9 +92,9 @@
         <!-- Sign-up form end -->
 
         <!-- Success message start -->
-        <section aria-hidden="true" class="aria-hidden:hidden max-inline-105 md:max-inline-126 grid grid-rows-[1fr_auto] col-start-1 row-start-1 justify-center items-center gap-10 px-6 md:px-16 pbs-12 pbe-10 md:pbe-16 success-message">
+        <section aria-hidden="true" class="aria-hidden:hidden md:block-[32.5rem] max-inline-105 md:max-inline-126 grid grid-rows-[1fr_auto] col-start-1 row-start-1 items-center md:items-end gap-10 px-6 md:px-16 pbs-12 pbe-10 md:pbe-16 success-message">
           <div>
-            <h2 class="before:block mbe-6 before:mbe-8 font-bold text-h1 before:content-[url('../img/icon-success.svg')] leading-none">
+            <h2 class="before:block mbe-5 before:mbe-8 font-bold text-h1 trim-both-lowercase before:content-[url('../img/icon-success.svg')] leading-none">
               Thanks for subscribing!
             </h2>
             <p>
@@ -105,10 +103,8 @@
               Please open it and click the button inside to confirm your subscription.
             </p>
           </div>
-          <button type="button" class="dismiss-btn btn-blue">
-            <span class="pbs-[0.2rem]">
-              Dismiss message
-            </span>
+          <button class="trim-both-lowercase dismiss-btn btn-blue" type="button">
+            Dismiss message
           </button>
         </section>
         <!-- Success message end -->

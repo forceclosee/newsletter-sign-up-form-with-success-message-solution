@@ -81,7 +81,7 @@
 }
 
 @utility btn-blue {
-  @apply block-14 inline-full flex justify-center items-center bg-blue-800 hover:bg-linear-to-r hover:from-pink-500 hover:to-amber-600 rounded-lg font-bold text-white cursor-pointer;
+  @apply block-14 inline-full bg-blue-800 hover:bg-linear-to-r hover:from-pink-500 hover:to-amber-600 rounded-lg font-bold text-white cursor-pointer;
 }
 
 @utility list {
@@ -89,5 +89,13 @@
 }
 
 @utility input {
-  @apply block-14 inline-full user-invalid:bg-red-100 valid:bg-green-100 mbe-6 px-6 border border-grey hover:border-blue-800 focus:border-blue-800 user-invalid:border-red-500 user-invalid:hover:border-red-500 user-invalid:focus:border-red-500 valid:border-green-500 valid:hover:border-green-500 valid:focus:border-blue-800 rounded-lg focus:outline-none hover:ring-1 hover:ring-blue-800 focus:ring-1 focus:ring-blue-800 user-invalid:hover:ring-red-500 valid:hover:ring-green-500 user-invalid:focus:ring-red-500 valid:focus:ring-blue-800 hover:ring-inset focus:ring-inset;
+  @apply block-14 inline-full user-invalid:bg-red-100 valid:bg-green-100 px-6 border border-grey hover:border-blue-800 focus:border-blue-800 user-invalid:border-red-500 user-invalid:hover:border-red-500 user-invalid:focus:border-red-500 valid:border-green-500 valid:hover:border-green-500 valid:focus:border-blue-800 rounded-lg focus:outline-none hover:ring-1 hover:ring-blue-800 focus:ring-1 focus:ring-blue-800 user-invalid:hover:ring-red-500 valid:hover:ring-green-500 user-invalid:focus:ring-red-500 valid:focus:ring-blue-800 hover:ring-inset focus:ring-inset placeholder:trim-both-lowercase;
+}
+
+@utility trim-both-lowercase {
+  text-box: trim-both cap text;
+}
+
+@utility trim-both-capital {
+  text-box: trim-both cap alphabetic;
 }
