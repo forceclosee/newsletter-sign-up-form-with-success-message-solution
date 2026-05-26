@@ -81,15 +81,71 @@
 }
 
 @utility btn-blue {
-  @apply block-14 inline-full bg-blue-800 hover:bg-linear-to-r hover:from-pink-500 hover:to-amber-600 rounded-lg font-bold text-white cursor-pointer;
+  @apply block-14 inline-full bg-blue-800 rounded-lg font-bold text-white cursor-pointer;
+
+  &:hover {
+    @media (hover: hover) {
+      @apply bg-linear-to-r from-pink-500 to-amber-600;
+    }
+  }
 }
 
 @utility list {
-  @apply flex items-start gap-4 before:content-[url('../img/icon-list.svg')] before:pbs-0.5;
+  @apply flex items-start gap-4;
+
+  &::before {
+    @apply content-[url('../img/icon-list.svg')] pbs-0.5;
+  }
 }
 
 @utility input {
-  @apply block-14 inline-full user-invalid:bg-red-100 valid:bg-green-100 px-6 border border-grey hover:border-blue-800 focus:border-blue-800 user-invalid:border-red-500 user-invalid:hover:border-red-500 user-invalid:focus:border-red-500 valid:border-green-500 valid:hover:border-green-500 valid:focus:border-blue-800 rounded-lg focus:outline-none hover:ring-1 hover:ring-blue-800 focus:ring-1 focus:ring-blue-800 user-invalid:hover:ring-red-500 valid:hover:ring-green-500 user-invalid:focus:ring-red-500 valid:focus:ring-blue-800 hover:ring-inset focus:ring-inset placeholder:trim-both-lowercase;
+  /* Default / Base State */
+  @apply block-14 inline-full px-6 border border-grey rounded-lg;
+
+  &::placeholder {
+    @apply trim-both-lowercase;
+  }
+
+  /* Default Interactions */
+  &:hover {
+    @media (hover: hover) {
+      @apply border-blue-800 ring-1 ring-blue-800 ring-inset;
+    }
+  }
+
+  &:focus {
+    @apply border-blue-800 outline-none ring-1 ring-blue-800 ring-inset;
+  }
+
+  /* Validation: Invalid State */
+  &:user-invalid {
+    @apply bg-red-100 border-red-500;
+
+    &:hover {
+      @media (hover: hover) {
+        @apply border-red-500 ring-red-500;
+      }
+    }
+
+    &:focus {
+      @apply border-red-500 ring-red-500;
+    }
+  }
+
+  /* Validation: Valid State */
+  &:valid {
+    @apply bg-green-100 border-green-500;
+
+    &:hover {
+      @media (hover: hover) {
+        @apply border-green-500 ring-green-500;
+      }
+    }
+
+    &:focus {
+      @apply border-blue-800 ring-blue-800;
+    }
+  }
 }
 
 @utility trim-both-lowercase {
